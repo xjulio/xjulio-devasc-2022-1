@@ -1,6 +1,4 @@
-arquivo = open("macs.txt")
-saida = arquivo.readlines()
-print(saida)
-print(type(saida))
-print(len(saida))
-arquivo.close()
+with open("macs.txt", "r", encoding="utf-8") as arquivo:
+    while linha := arquivo.readline():
+        print(linha)
+        linha = arquivo.readline()
